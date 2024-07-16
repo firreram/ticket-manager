@@ -1,0 +1,62 @@
+@prt = 3001
+## Retrieve all the tickets.
+GET http://localhost:{{prt}}/api/tickets HTTP/1.1
+###
+
+## Retrieve all the categories.
+GET http://localhost:{{prt}}/api/categories HTTP/1.1
+###
+
+## Retrieve a single ticket.
+GET http://localhost:{{prt}}/api/tickets/3 HTTP/1.1
+###
+
+## Retrieve blocks.
+GET http://localhost:{{prt}}/api/blocks HTTP/1.1
+###
+
+## Create new ticket.
+POST http://localhost:{{prt}}/api/tickets HTTP/1.1
+content-type: application/json
+
+{
+    "category": "payment",
+    "timestamp": "2024-12-25",
+    "userid": 1,
+    "title": "Christmas gift",
+    "body":"Hello,\n\nI would like to know why the Christmas gift has not been delivered yet.\n\nThanks.",
+    "status": "closed"
+}
+###
+
+## Create new block.
+POST http://localhost:{{prt}}/api/blocks HTTP/1.1
+content-type: application/json
+
+{
+    "userid": 2,
+    "body": "box, box",
+    "ticketid": 22
+}
+
+###
+
+## Update a ticket.
+PUT http://localhost:{{prt}}/api/tickets/22/status HTTP/1.1
+content-type: application/json
+
+{
+    "status": "closed"
+}
+
+###
+
+## Update a ticket category
+PUT http://localhost:{{prt}}/api/tickets/22/category HTTP/1.1
+content-type: application/json
+
+{
+    "category": "inquiry"
+}
+
+###

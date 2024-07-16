@@ -1,0 +1,21 @@
+@prt = 3002
+
+## Get the estimation for admin users
+POST http://localhost:{{prt}}/api/estimate HTTP/1.1
+content-type: application/json
+
+{
+    "title":"abcd",
+    "category":"abcd"
+}
+###
+
+## Get the estimation for logged in users
+POST http://localhost:{{prt}}/api/estimatedays HTTP/1.1
+content-type: application/json
+
+{
+    "title":"abcd",
+    "category":"abcd"
+}
+###

@@ -1,0 +1,25 @@
+todo------------------
++insert api db input filters and validation
++insert api category insert (not mandatory)
++block dropdown as state? ARRAY OF STATES OK
++state column in db remane status OK
++remove error message when no blocks, insert "no response yet." OK
++check state of TicketLayout use effect
++chech the state of the categories loading in add ticket
++implement correct aside bar visualization
++add confirmation modal on ticket submission
++<URGENT> TO FIX block list state update! OK
++users log with email!
++add spinner while loading DB OK
++make the details button more appealing(like an up-down arrow)
++fare README
++inserire istruzioni per avvio server nel futuro
++lock details button fon non-auth users, put something to ask auth
+    (when clicked the disabled button should notify the user)
++does the confirmation need to be a page?OK but put in a readonly form!
+
+comments--------------
++ticket state is set to default open for security reasons
++categories are saved in a table to allow future modifications
++added constraint on userid
++added contraint on category name
